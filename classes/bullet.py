@@ -10,7 +10,10 @@ class Bullet(Sprite):
         self.screen = screen
 
         # Create a bullet rect at (0, 0) and then set correct position
-        self.rect = pygame.Rect(0, 0, ai_settings.bullet_width, ai_settings.bullet_height)
+        self.image = pygame.image.load('assets/img/bullet.bmp')
+        self.rect = self.image.get_rect()
+
+        #self.rect = pygame.Rect(0, 0, ai_settings.bullet_width, ai_settings.bullet_height)
         self.rect.centerx = ship.rect.centerx
         self.rect.top = ship.rect.top
 
@@ -20,10 +23,15 @@ class Bullet(Sprite):
         self.color = ai_settings.bullet_color
         self.speed_factor = ai_settings.bullet_speed_factor
 
+        # play sound effect
+        pygame.mixer.music.load('assets/ogg/bullet.ogg')
+        pygame.mixer.music.play()
+
     def update(self):
         # Move Bullet
         self.y -= self.speed_factor
         self.rect.y = self.y
 
     def draw_bullet(self):
-        pygame.draw.rect(self.screen, self.color, self.rect)
+        self.screen.blit(self.image, self.rect)
+

@@ -13,7 +13,7 @@ class Ship():
 
         # Set ship starting location
         self.rect.centerx = self.screen_rect.centerx
-        self.rect.centery = self.screen_rect.bottom - 30
+        self.rect.centery = self.screen_rect.bottom - 60
         self.center = float(self.rect.centerx)
 
         # Movement flags
