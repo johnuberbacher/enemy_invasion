@@ -1,5 +1,5 @@
 # Enemy Invasion
-![made-with-python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![made-with-python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![made-with-python](https://img.shields.io/badge/PyGame-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
 Alien Invasion game from Python Crash Course book
 
